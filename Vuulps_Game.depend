@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1582919984 source:c:\users\slavi\documents\vuulps_game\lala.cpp
+	"lala.h"
+
+1582738100 c:\users\slavi\documents\vuulps_game\lala.h
+	<iostream>
+	<sstream>
+	<fstream>
+	<string>
+	<GL/glew.h>
+	<gl/glaux.h>
+	<GLFW/glfw3.h>
+	<glm.hpp>
+	<gtc/matrix_transform.hpp>
+	<gtc/type_ptr.hpp>
+	<SOIL.h>
+
+1582919593 source:c:\users\slavi\documents\vuulps_game\game.cpp
+	"Game.h"
+
+1582916596 c:\users\slavi\documents\vuulps_game\game.h
+	"lala.h"
+
+1582917616 source:c:\users\slavi\documents\vuulps_game\deber.cpp
+	"Game.h"
+
