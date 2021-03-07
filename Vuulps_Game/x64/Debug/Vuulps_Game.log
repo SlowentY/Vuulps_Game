@@ -1,5 +1,4 @@
-﻿  Game.cpp
-  deber.cpp
+﻿  deber.cpp
 E:\vuulps\Vuulps_Game\deber.cpp(65,19): warning C4244: =: преобразование "int" в "GLfloat", возможна потеря данных
 E:\vuulps\Vuulps_Game\deber.cpp(66,20): warning C4244: =: преобразование "int" в "GLfloat", возможна потеря данных
 E:\vuulps\Vuulps_Game\deber.cpp(106,10): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных

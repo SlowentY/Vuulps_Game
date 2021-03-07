@@ -72,12 +72,12 @@ void Shader::Use()
 }
 void Shader::Uniform(const char* name, glm::mat4 mat)
 {
-    GLuint Loc = glGetUniformLocation(this->Prg, "projection");
+    GLuint Loc = glGetUniformLocation(this->Prg, name);
     glUniformMatrix4fv(Loc, 1, GL_FALSE, glm::value_ptr(mat));
 }
 void Shader::Uniform(const char* name, float data)
 {
-    GLuint Loc = glGetUniformLocation(this->Prg, "projection");
+    GLuint Loc = glGetUniformLocation(this->Prg, name);
     glUniform1fv(Loc, 1, &data);
 }
 

@@ -169,12 +169,11 @@ void Object::render(glm::mat4 m, glm::mat4 p, glm::mat4 v)
 {
     
     shader->Use();
-    GLuint pLoc = glGetUniformLocation(shader->Prg, "projection");
-    GLuint mLoc = glGetUniformLocation(shader->Prg, "model");
-    GLuint vLoc = glGetUniformLocation(shader->Prg, "view");
-    glUniformMatrix4fv(vLoc, 1, GL_FALSE, glm::value_ptr(v));
-    glUniformMatrix4fv(pLoc, 1, GL_FALSE, glm::value_ptr(p));
-    glUniformMatrix4fv(mLoc, 1, GL_FALSE, glm::value_ptr(m));
+    
+    shader->Uniform("model", m);
+    shader->Uniform("view", v);
+    shader->Uniform("projection", p);
+
     texture->Set();
     mesh->Render();
 
