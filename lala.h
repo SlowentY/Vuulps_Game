@@ -20,6 +20,7 @@
 #ifndef SHADER_H
 #define SHADER_H
 
+
 class Shader{
 	private:
 		const GLchar *fs, *vs;
@@ -28,6 +29,9 @@ class Shader{
 		GLuint Prg;
 		Shader(const char* vp, const char* fp);
 		void Use();
+		void Uniform(const char* name, glm::mat4 mat);
+		void Uniform(const char* name, float data);
+		void Uniform(const char* name, int data);
 };
 
 GLuint load_img(const char* path);

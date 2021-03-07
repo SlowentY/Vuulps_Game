@@ -70,6 +70,16 @@ void Shader::Use()
 {
 	glUseProgram(Prg);
 }
+void Shader::Uniform(const char* name, glm::mat4 mat)
+{
+    GLuint Loc = glGetUniformLocation(this->Prg, "projection");
+    glUniformMatrix4fv(Loc, 1, GL_FALSE, glm::value_ptr(mat));
+}
+void Shader::Uniform(const char* name, float data)
+{
+    GLuint Loc = glGetUniformLocation(this->Prg, "projection");
+    glUniform1fv(Loc, 1, &data);
+}
 
 Texture::Texture(const char* path)
 {

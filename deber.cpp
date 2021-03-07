@@ -2,20 +2,27 @@
 // GLEW
 #include "Game.h"
 
-    // World space positions of our cubes
+
+// World space positions of our cubes
 
     
-	glm::vec3 camPos = glm::vec3(0.0f, 0.0f, 5.0f);
-	glm::vec3 camFrac = glm::vec3(0.0f, 0.0f, 0.0f);
-	glm::vec3 camUp = glm::vec3(0.0f, 1.0f, 0.0f);
-    GLfloat s = -90.0f;
-    GLfloat d = 0.0f;
-    GLfloat lastX = 400.0, lastY = 300.0;
-    bool firstmouse = true;
-    GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
-    GLfloat lastFrame = 0.0f;
-    bool keys[1024];
+glm::vec3 camPos = glm::vec3(0.0f, 0.0f, 5.0f);
+glm::vec3 camFrac = glm::vec3(0.0f, 0.0f, 0.0f);
+glm::vec3 camUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
+GLfloat s = -90.0f;
+GLfloat d = 0.0f;
+GLfloat lastX = 400.0, lastY = 300.0;
+bool firstmouse = true;
+
+GLfloat deltaTime = 0.0f;	// Time between current frame and last frame
+GLfloat lastFrame = 0.0f;
+
+bool keys[1024];
+
+
+
+// Func.
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void move();
@@ -109,14 +116,6 @@ int main(void)
   	glfwSetKeyCallback(window, key_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
-    GLuint pLoc = glGetUniformLocation(prg->Prg, "projection");
-    GLuint mLoc = glGetUniformLocation(prg->Prg, "model");
-    GLuint vLoc = glGetUniformLocation(prg->Prg, "view");
-
-    GLuint pLoc1 = glGetUniformLocation(prg2->Prg, "projection");
-    GLuint mLoc1 = glGetUniformLocation(prg2->Prg, "model");
-    GLuint vLoc1 = glGetUniformLocation(prg2->Prg, "view");
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
