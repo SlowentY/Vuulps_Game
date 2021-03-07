@@ -152,7 +152,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\x64\Debug\fragment.glsl" />
+    <None Include="..\x64\Debug\fragment2.glsl" />
+    <None Include="..\x64\Debug\fragmentLamp.glsl" />
     <None Include="..\x64\Debug\vertex.glsl" />
+    <None Include="..\x64\Debug\vertex2.glsl" />
+    <None Include="..\x64\Debug\vertexLamp.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

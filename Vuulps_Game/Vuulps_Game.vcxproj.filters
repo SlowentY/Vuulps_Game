@@ -34,10 +34,22 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\x64\Debug\fragment.glsl">
+    <None Include="..\x64\Debug\fragment2.glsl">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="..\x64\Debug\vertex2.glsl">
       <Filter>Файлы ресурсов</Filter>
     </None>
     <None Include="..\x64\Debug\vertex.glsl">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="..\x64\Debug\fragment.glsl">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="..\x64\Debug\vertexLamp.glsl">
+      <Filter>Файлы ресурсов</Filter>
+    </None>
+    <None Include="..\x64\Debug\fragmentLamp.glsl">
       <Filter>Файлы ресурсов</Filter>
     </None>
   </ItemGroup>

@@ -53,9 +53,11 @@ int main(void)
 	}
 
 	int width, height;
+
 	glfwGetFramebufferSize(window, &width, &height);
     lastX = width / 2;
     lastY = height / 2;
+
 	glViewport(0, 0, width, height);
 
 	Shader *prg = new Shader("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\vertex2.glsl", "E:\\vuulps\\Vuulps_Game\\x64\\Debug\\fragment2.glsl");
@@ -64,10 +66,6 @@ int main(void)
 	Texture *tex = new SimpleTexture("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\container001-grey.png");
 	Mesh *obj = new RectangleMesh(1.5f, 1.5f, 1.5f);
     obj->Load();
-
-    Texture* tex2 = new SimpleTexture("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\container001-grey.png");
-    Mesh* obj2 = new RectangleMesh(10.0f, 10.0f, 10.0f);
-    obj2->Load();
 
     Texture* tex3 = new SimpleTexture("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\container001-grey.png");
     Mesh* obj3 = new RectangleMesh(4.1f, 4.1f, 4.1f);
@@ -87,10 +85,8 @@ int main(void)
     skyMesh->Load();
 
     Object* r = new Object(obj, prg, tex);
-    Object* r2 = new Object(obj2, prg2, tex2);
     Object* r3 = new Object(obj3, prg, tex3);
     Object* r4 = new Object(obj3, prg2, tex3);
-    Object* skybox = new Object(skyMesh, sky, skyTex);
 
 	glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
 	glm::mat4 model(1.0f);
@@ -164,7 +160,7 @@ int main(void)
 
         glm::mat4 model3 = glm::mat4(1.0f);
 
-        model3 = glm::translate(model3, glm::vec3(-5.0f, 0.0f, 0.0f));
+        model3 = glm::translate(model3, glm::vec3(-10.0f, 0.0f, 0.0f));
 
         r4->render(model3, projection, view);
 
