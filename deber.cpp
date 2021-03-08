@@ -72,10 +72,13 @@ int main(void)
 
 	Shader *prg = new Shader("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\vertex2.glsl", "E:\\vuulps\\Vuulps_Game\\x64\\Debug\\fragment2.glsl");
     Shader* prg2 = new Shader("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\vertex.glsl", "E:\\vuulps\\Vuulps_Game\\x64\\Debug\\fragment.glsl");
+    Shader* prg3 = new Shader("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\vertexLamp.glsl", "E:\\vuulps\\Vuulps_Game\\x64\\Debug\\fragmentLamp.glsl");
 
 	Texture *tex = new SimpleTexture("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\container001-grey.png");
 	Mesh *obj = new RectangleMesh(1.5f, 1.5f, 1.5f);
     obj->Load();
+
+    Texture* tex2 = new SimpleTexture("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\fonar.jpg");
 
     Texture* tex3 = new SimpleTexture("E:\\vuulps\\Vuulps_Game\\x64\\Debug\\container001-grey.png");
     Mesh* obj3 = new RectangleMesh(4.1f, 4.1f, 4.1f);
@@ -94,7 +97,7 @@ int main(void)
     Mesh* skyMesh = new SkyboxMesh();
     skyMesh->Load();
 
-    Object* r = new Object(obj, prg, tex);
+    Object* r = new Object(obj, prg3, tex2);
     Object* r3 = new Object(obj3, prg, tex3);
     Object* r4 = new Object(obj3, prg2, tex3);
 
@@ -141,11 +144,11 @@ int main(void)
         prg2->Uniform("brightness", glm::vec3(rt, rt, rt));
 		
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glClearColor(rt*0.5f, rt*0.6f, rt*0.99f, 1.0f);
+        glClearColor(0.125f, 0.15f, 0.2475f, 1.0f);
 
         glm::mat4 model1 = glm::mat4(1.0f);
 
-        model1 = glm::translate(model1, glm::vec3(5.0f, 25.0f, 0.0f));
+        model1 = glm::translate(model1, glm::vec3(0.0f, 5.0f, -10.0f));
 
         r->render(model1, projection, view);
 
@@ -157,7 +160,7 @@ int main(void)
 
         glm::mat4 model3 = glm::mat4(1.0f);
 
-        model3 = glm::translate(model3, glm::vec3(-10.0f, 0.0f, 0.0f));
+        model3 = glm::translate(model3, glm::vec3(-5.0f, 0.0f, 0.0f));
 
         r4->render(model3, projection, view);
 

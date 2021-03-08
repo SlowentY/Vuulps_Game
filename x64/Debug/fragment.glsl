@@ -8,5 +8,6 @@ uniform vec3 brightness;
 
 void main()
 {
-	color = texture(tex, TexCoord) * vec4(brightness.xyz, 1.0f);
+	vec4 ambient = vec4(brightness.xyz, 1.0f) * 0.15f;
+	color = texture(tex, TexCoord) * ambient;
 }
