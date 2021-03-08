@@ -7,7 +7,7 @@
 
     
 glm::vec3 camPos = glm::vec3(0.0f, 0.0f, 5.0f);
-glm::vec3 camFrac = glm::vec3(0.0f, 0.0f, 0.0f);
+glm::vec3 camFrac = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 camUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
 float b = 1.0f;
@@ -98,19 +98,10 @@ int main(void)
     Object* r3 = new Object(obj3, prg, tex3);
     Object* r4 = new Object(obj3, prg2, tex3);
 
-	glm::vec4 vec(1.0f, 0.0f, 0.0f, 1.0f);
 	glm::mat4 model(1.0f);
-	vec = model * vec;
-
 	glm::mat4 view(1.0f);
-	view = glm::lookAt(camPos, camPos + camFrac, camUp);
-
 	glm::mat4 projection(1.0f);
 	float h = height, w = width;
-	if(h != 0)
-	{
-		projection = glm::perspective(360.0f, w/h, 0.1f, 100.0f);
-	}
 
 
 	
