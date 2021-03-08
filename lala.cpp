@@ -70,6 +70,10 @@ void Shader::Use()
 {
 	glUseProgram(Prg);
 }
+void Shader::Unset()
+{
+    glUseProgram(NULL);
+}
 void Shader::Uniform(const char* name, glm::mat4 mat)
 {
     GLuint Loc = glGetUniformLocation(this->Prg, name);
@@ -79,6 +83,11 @@ void Shader::Uniform(const char* name, float data)
 {
     GLuint Loc = glGetUniformLocation(this->Prg, name);
     glUniform1fv(Loc, 1, &data);
+}
+void Shader::Uniform(const char* name, glm::vec3 data)
+{
+    GLuint Loc = glGetUniformLocation(this->Prg, name);
+    glUniform3fv(Loc, 1, glm::value_ptr(data));
 }
 
 Texture::Texture(const char* path)

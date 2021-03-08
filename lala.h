@@ -29,9 +29,11 @@ class Shader{
 		GLuint Prg;
 		Shader(const char* vp, const char* fp);
 		void Use();
+		void Unset();
 		void Uniform(const char* name, glm::mat4 mat);
 		void Uniform(const char* name, float data);
 		void Uniform(const char* name, int data);
+		void Uniform(const char* name, glm::vec3 data);
 };
 
 GLuint load_img(const char* path);

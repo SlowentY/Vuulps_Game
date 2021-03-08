@@ -170,6 +170,8 @@ void Object::render(glm::mat4 m, glm::mat4 p, glm::mat4 v)
     
     shader->Use();
     
+    
+
     shader->Uniform("model", m);
     shader->Uniform("view", v);
     shader->Uniform("projection", p);

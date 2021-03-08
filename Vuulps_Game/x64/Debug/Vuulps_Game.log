@@ -1,18 +1,17 @@
 ﻿  deber.cpp
-E:\vuulps\Vuulps_Game\deber.cpp(65,19): warning C4244: =: преобразование "int" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(66,20): warning C4244: =: преобразование "int" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(106,10): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(106,22): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(126,30): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(136,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(137,7): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(185,17): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(186,17): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(190,21): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(191,21): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(192,13): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
-E:\vuulps\Vuulps_Game\deber.cpp(193,13): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
-  lala.cpp
-E:\vuulps\Vuulps_Game\lala.cpp(107,84): warning C4244: аргумент: преобразование "double" в "GLint", возможна потеря данных
-  Создание кода...
+E:\vuulps\Vuulps_Game\deber.cpp(68,19): warning C4244: =: преобразование "int" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(69,20): warning C4244: =: преобразование "int" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(109,10): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(109,22): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(129,30): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(139,13): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(140,7): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(192,17): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(193,17): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(197,21): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(198,21): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(199,13): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(200,13): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(246,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+E:\vuulps\Vuulps_Game\deber.cpp(248,17): warning C4244: =: преобразование "double" в "float", возможна потеря данных
   Vuulps_Game.vcxproj -> E:\vuulps\Vuulps_Game\x64\Debug\Vuulps_Game.exe

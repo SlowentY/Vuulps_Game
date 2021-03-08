@@ -10,6 +10,9 @@ glm::vec3 camPos = glm::vec3(0.0f, 0.0f, 5.0f);
 glm::vec3 camFrac = glm::vec3(0.0f, 0.0f, 0.0f);
 glm::vec3 camUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
+float b = 1.0f;
+float rt = 1.0f;
+
 GLfloat s = -90.0f;
 GLfloat d = 0.0f;
 GLfloat lastX = 400.0, lastY = 300.0;
@@ -140,10 +143,14 @@ int main(void)
 			projection = glm::perspective(45.0f, w/h, 0.1f, 120.0f);
 		}
 		view = glm::lookAt(camPos, camPos + camFrac, camUp);
-
+        
+        prg->Use();
+        prg->Uniform("brightness", glm::vec3(rt, rt, rt));
+        prg2->Use();
+        prg2->Uniform("brightness", glm::vec3(rt, rt, rt));
 		
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glClearColor(0.5f, 0.6f, 0.99f, 1.0f);
+        glClearColor(rt*0.5f, rt*0.6f, rt*0.99f, 1.0f);
 
         glm::mat4 model1 = glm::mat4(1.0f);
 
@@ -235,4 +242,8 @@ void move()
         camPos -= glm::normalize(glm::cross(camFrac, camUp)) * cameraSpeed;
     if (keys[GLFW_KEY_D])
         camPos += glm::normalize(glm::cross(camFrac, camUp)) * cameraSpeed;
+    if (keys[GLFW_KEY_F])
+        rt = rt - 0.01;
+    if (keys[GLFW_KEY_G])
+        rt = rt + 0.01;
 }

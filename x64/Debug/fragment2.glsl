@@ -4,8 +4,9 @@ in vec2 TexCoord;
 
 out vec4 color;
 uniform sampler2D tex;
+uniform vec3 brightness;
 
 void main()
 {
-	color = texture(tex, TexCoord) * vec4(1.7f, 1.0f, 1.0f, 1.0f);
+	color = texture(tex, TexCoord) * vec4(1.7f, 1.0f, 1.0f, 1.0f)  * vec4(brightness.xyz, 1.0f);
 }
